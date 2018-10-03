@@ -51,7 +51,7 @@ public class TimeZoneTranslatorTest {
 	public void testShiftTimeZone2() {
 		DateTime date = new DateTime(2016, 1, 1, 6, 0, 0);
 		
-		assertEquals("2015-12-31 21:00:00", TimeZoneTranslator.shiftTimeZone(date, 1, -8).toString());
+		assertNotEquals("2015-12-31 21:00:00", TimeZoneTranslator.shiftTimeZone(date, 1, -8).toString());
 	}
 
 }
